@@ -1,0 +1,22 @@
+h1{
+    color: darkorchid;
+}
+h2{
+    color: brown;
+}
+h3{
+    color: green;
+}
+h4{
+    color: darkolivegreen;
+}
+h6{
+    color: rgb(32, 2, 75);
+}
+span{
+    color: blue;
+    font-size: medium;
+}
+p{
+    color: rgb(92, 4, 41);
+}

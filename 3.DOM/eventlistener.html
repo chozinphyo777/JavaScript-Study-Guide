@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener</title>
+    <style>
+        .welcome{
+            background-color:rgb(153, 51, 138);
+            color: white;
+            padding: 10px;
+            display: inline;
+        }
+        button{
+            background-color: #b9c0c184;
+            padding: 10px 20px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <section style="margin: 3em;">
+        <p id="welcome" class="welcome">Welcome to Bagan</p>
+        <button id="red" type="button">Red</button>
+        <button id="blue" type="button">Blue</button>
+        <div style="margin-top:20px ;">
+            <button id="mouseover" type="button" >Mouse Over</button>
+            <button id="mouseout" type="button" >Mouse Move</button>
+        </div>
+        
+    </section>
+    
+</body>
+<script>
+    var welcome = document.getElementById("welcome");
+    document.getElementById("red").addEventListener("click",function(){
+       welcome.innerHTML = "Welcome to Red World";
+       welcome.style.backgroundColor= "red";
+    });
+    document.getElementById("blue").addEventListener("click",function(){
+        welcome.innerHTML = "Welcome to Blue World";
+        welcome.style.backgroundColor= "blue";
+    });
+
+    let mouseover = document.getElementById("mouseover");
+    mouseover.addEventListener("mouseover",function(){
+        mouseover.style.backgroundColor= "#12888a";
+        mouseover.style.color= "#fff";
+    });
+
+    let mouseout = document.getElementById("mouseout");
+    mouseout.addEventListener("mouseout",function(){
+        mouseout.style.backgroundColor= "yellow";
+    });
+</script>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        .test3class{
+            color: blueviolet;
+            font-size:3em
+        }
+        .test4class{
+            color: blue;padding: 2em;
+             background-color: aquamarine;
+            display: inline-block;
+            width: 50%;
+        }
+        .test4classchange{
+            color: hsl(0, 0%, 100%);padding: 2em;
+            width: 25%;
+            background-color: rgb(2, 17, 12);
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h3 id="test" class="title">Hello tesing DOM</h3>
+    <h2 id="test1">Welcome to JS</h2>
+    <p id="test3">Old Paragraph</p>
+    <p id="test4" class="test4class">Hello</p>
+    <div>
+        <img id="image" src="smiley.gif" width="160" height="120">
+    </div>
+    
+    <br>
+    <button onclick="myFunction()">Add Class</button>
+</body>
+<script>
+    //Finding HTML Elements
+    var element1 =  document.getElementById("test"); //Find an element by element id
+    var element2 = document.getElementsByTagName("h2"); //Find an element by element tag name
+    var element3 = document.getElementsByClassName("title");//Find an element by element class name
+    var element4 = document.querySelectorAll("h3"); ////Find an element by query selector
+    console.log(element1);
+    console.log(element2);
+    console.log(element3);
+    console.log(element4);
+
+    //Changing HTML Elements
+    let test4 = document.getElementById("test4");
+    test4.style.border = "2px solid blue"; // To change the Style of element (element.style.property)
+    element1.style.color = "red"; 
+
+    console.log(document.getElementById("test").innerHTML);// Get the content of an h2 element (element.innerHTML)
+    document.getElementById("test3").innerHTML = "New Paragraph"; // Change the content of an p element
+
+    document.getElementById("image").src = "landscape.jpeg"; //Change the attribute value of an HTML element (element.attribute)
+    document.getElementById("image").width = "400";
+    document.getElementById("image").height = "250";
+
+    function myFunction(){
+        document.getElementById("test3").setAttribute("class","test3class"); //Change the attribute value of an HTML element
+        document.getElementById("image").setAttribute("height","100");
+        document.getElementById("test4").setAttribute("class","test4classchange");
+    };
+
+</script>
+</html>
